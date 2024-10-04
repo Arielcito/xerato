@@ -1,10 +1,12 @@
 "use client";
 
 
-import Calendly from "./calendly";
+import Calendly from "./cal";
 import ShowcaseNavbar from "@/components/showcase-navbar";
 import { PiCheckCircle } from "react-icons/pi";
 import { motion } from "framer-motion";
+import Cal from "@calcom/embed-react";
+import CalEmbed from "./cal";
 
 const checkItemVariants = {
   hidden: { opacity: 0, x: -50 },
@@ -71,7 +73,7 @@ const Meeting = () => {
         </div>
 
     <div className="md:w-1/2">
-      <Calendly />
+      <CalEmbed />
       </div>
       </div>
     </div>

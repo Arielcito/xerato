@@ -1,7 +1,7 @@
 "use client";
 
+import { useTranslation } from "next-i18next";
 import { AnimatedBeamMultipleOutputDemo } from "@/components/demos/animated-beam-demo";
-import { AnimatedShinyTextDemo } from "@/components/demos/animated-shiny-text-demo";
 import BoxRevealDemo from "@/components/demos/box-reveal-demo";
 import { CoverDemo } from "@/components/demos/cover-demo";
 import { ScrollBasedVelocityDemo } from "@/components/demos/scroll-based-velocity-demo";
@@ -16,7 +16,6 @@ import { Link as ScrollLink, Element } from "react-scroll";
 import { IconStarFilled } from "@tabler/icons-react";
 import { ShootingStarsAndStarsBackgroundDemo } from "@/components/demos/shooting-stars-demo";
 import LetsMakeThingsHappenSection from "@/components/ui/lets-make-things-happen";
-
 
 const services = [
   {
@@ -58,6 +57,7 @@ const services = [
 ];
 
 export default function Home() {
+
   return (
     <div
       className="overflow-clip 
@@ -84,8 +84,8 @@ export default function Home() {
 
         <div className="absolute right-1/2 translate-x-1/2 transform">
           <div className="hidden md:flex gap-x-10 items-center text-gray-700 font-medium text-lg cursor-pointer">
-            <Link href={"/showcase"} className="hover:text-blue-500">
-              Showcase
+            <Link href={"/projects"} className="hover:text-blue-500">
+              Projects
             </Link>
 
             <ScrollLink
@@ -115,12 +115,6 @@ export default function Home() {
         </div>
 
         <div className="flex items-center gap-x-4">
-          <a href="tel:519400200" className="hidden lg:flex">
-            <button className="px-4 py-2 rounded-md flex items-center gap-x-3">
-              (519)-400-200
-            </button>
-          </a>
-
           <Link
             href={"/meeting"}
             className="
@@ -144,17 +138,14 @@ export default function Home() {
 
       <main className="md:pb-10">
         <div className="md:px-0 mx-6 xl:w-4/5 2xl:w-[68%] md:mx-auto mt-14">
-          <AnimatedShinyTextDemo />
-
           <h1>
-            <CoverDemo />
+            <CoverDemo title={("title")} subtitle={("subtitle")} />
           </h1>
           <p
             className="md:text-center
            text-xl md:text-2xl my-6 md:my-10 md:w-4/5 mx-auto text-gray-500"
           >
-            Schedule a call with us to discuss your project and get a quote in
-            minutes
+            {("description")}
           </p>
 
           <div
@@ -217,13 +208,13 @@ export default function Home() {
             <BoxReveal boxColor={"#3b82f6"} duration={0.5}>
               <p className="md:text-xl font-semibold flex gap-x-2 md:gap-x-4 items-center">
                 <PiCheckBold className="text-xl text-blue-500" />
-                Marketing
+                Product
               </p>
             </BoxReveal>
             <BoxReveal boxColor={"#3b82f6"} duration={0.5}>
               <p className="md:text-xl font-semibold flex gap-x-2 md:gap-x-4 items-center">
                 <PiCheckBold className="text-xl text-blue-500" />
-                Strategy
+                Marketing
               </p>
             </BoxReveal>
           </div>
@@ -237,7 +228,7 @@ export default function Home() {
               <div className="flex my-6 gap-x-5 w-full">
                 <div>
                   <h1 className="text-blue-500 text-3xl md:text-5xl">
-                    <NumberTicker value={1000} /> +
+                    <NumberTicker value={10} /> +
                     <p className="text-gray-500 text-sm md:text-md">
                       Happy Clients
                     </p>
@@ -248,7 +239,7 @@ export default function Home() {
 
                 <div className="flex-1 min-w-0">
                   <h1 className="text-blue-500 text-3xl md:text-5xl whitespace-nowrap overflow-hidden">
-                    <NumberTicker value={100} /> +
+                    <NumberTicker value={10} /> +
                     <p className="text-gray-500 text-sm md:text-md">
                       Projects Completed
                     </p>
@@ -263,12 +254,32 @@ export default function Home() {
                 direction="left"
                 items={[
                   {
-                    logo: "/logo/logo.webp",
-                    name: "Logo",
+                    logo: "/logo/as1-logo.webp",
+                    name: "as1-logo",
                   },
                   {
-                    logo: "/logo/logo.webp",
-                    name: "Logo",
+                    logo: "/logo/copa-de-reyes.png",
+                    name: "copa-de-reyes",
+                  },
+                  {
+                    logo: "/logo/black-rhino.webp",
+                    name: "black-rhino",
+                  },
+                  {
+                    logo: "/logo/dona-pupa.webp",
+                    name: "dona-pupa",
+                  },
+                  {
+                    logo: "/logo/novoturismo.png",
+                    name: "novoturismo",
+                  },
+                  {
+                    logo: "/logo/rising-shakti.png",
+                    name: "rising-shakti",
+                  },
+                  {
+                    logo: "/logo/congreso-de-punta.png",
+                    name: "congreso-de-punta",
                   },
                 ]}
               />
@@ -279,14 +290,14 @@ export default function Home() {
 
       <Element name="services">
         <div className="md:px-0 mx-6 xl:w-4/5 2xl:w-[68%] md:mx-auto ">
-        <h1>
-          <WordPullUpDemo />
-        </h1>
-        <p className="md:text-center py-4 md:w-1/2 mx-auto text-xl md:text-2xl text-gray-500">
-        All of our services are designed to help your business stand out 
-        </p>
+          <h1>
+            <WordPullUpDemo />
+          </h1>
+          <p className="md:text-center py-4 md:w-1/2 mx-auto text-xl md:text-2xl text-gray-500">
+            All of our services are designed to help your business stand out
+          </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-10">
             {services.map((service) => (
               <div
                 key={service.title}
@@ -313,8 +324,8 @@ export default function Home() {
 
       <Element name="process">
         <main className="md:px-0 mx-6 md:mx-auto">
-        <h1 className="text-3xl md:text-5xl md:text-center font-medium flex items-center gap-x-2 mx-auto justify-center">
-        Our{" "}
+          <h1 className="text-3xl md:text-5xl md:text-center font-medium flex items-center gap-x-2 mx-auto justify-center">
+            Our{" "}
             <span className="text-blue-500 flex gap-x-1 items-center">
               {" "}
               <Image
@@ -336,23 +347,23 @@ export default function Home() {
             Process
           </h1>
 
-          <p className="text-center 
+          <p
+            className="text-center 
           py-4 md:w-1/2 mx-auto 
-          text-xl md:text-2xl text-gray-500">
+          text-xl md:text-2xl text-gray-500"
+          >
             All of our services are designed to help your business to get
             noticed.
           </p>
 
           <div className="flex flex-col md:flex-row items-center justify-center w-full md:w-1/2 mx-auto">
-          <div className="w-full md:w-1/2 order-2 md:order-1">
-            <AnimatedBeamMultipleOutputDemo />
+            <div className="w-full md:w-1/2 order-2 md:order-1">
+              <AnimatedBeamMultipleOutputDemo />
+            </div>
+            <div className="w-full md:w-1/2 order-1 md:order-2 md:ml-0">
+              <BoxRevealDemo />
+            </div>
           </div>
-          <div className="w-full md:w-1/2 order-1 md:order-2 md:ml-0">
-            <BoxRevealDemo />
-          </div>
-
-          </div>
-
         </main>
       </Element>
 
@@ -367,7 +378,7 @@ export default function Home() {
           />
           <div className="flex flex-col gap-y-5 md:w-1/2">
             <h1 className="text-lg md:text-2xl ">
-              &quot;We&apos;ve been working with Bird for over 2 years and
+              &quot;We&apos;ve been working with Xerato for over 2 years and
               they&apos;ve been amazing to work with. They&apos;ve helped us
               grow our business and we couldn&apos;t be happier with the
               results. &quot;
@@ -393,7 +404,7 @@ export default function Home() {
       </Element>
 
       <section className="my-10 md:py-20 xl:w-4/5 2xl:w-[68%] md:mx-auto">
-      <LetsMakeThingsHappenSection />
+        <LetsMakeThingsHappenSection />
       </section>
 
       <footer className="bg-[#fafafa] py-10  px-6 md:px-0 md:mx-auto border-t">
@@ -407,14 +418,14 @@ export default function Home() {
               alt="image"
             />{" "}
           </h1>
-          <p className="text-left  text-xl  text-gray-500">519-200-5000</p>
+          <p className="text-left  text-xl  text-gray-500">54-91156569844</p>
           <p className="text-left  text-xl  text-gray-500">
-            admin@birdsoftware.ca
+            serato.arieli@gmail.com
           </p>
         </div>
 
         <div className="flex md:justify-center gap-x-4 mt-10">
-          © 2025 Bird. All Rights Reserved.
+          © 2025 Xerato. All Rights Reserved.
           <Link href="/" className="text-blue-500">
             Privacy Policy
           </Link>

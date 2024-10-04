@@ -14,14 +14,14 @@ const Footer = () => {
             alt="image"
           />{" "}
         </h1>
-        <p className="text-left  text-xl  text-gray-500">519-319-1562</p>
+        <p className="text-left  text-xl  text-gray-500">54-911-5656-9844</p>
         <p className="text-left  text-xl  text-gray-500">
-          admin@birdsoftware.ca
+          serato.arieli@gmail.com
         </p>
       </div>
 
       <div className="flex md:justify-center gap-x-4 mt-10">
-        © 2024 Bird. All Rights Reserved.
+        © 2024 Xerato. All Rights Reserved.
         <Link href="/" className="text-blue-500">
           Privacy Policy
         </Link>
