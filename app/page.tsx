@@ -139,13 +139,13 @@ export default function Home() {
       <main className="md:pb-10">
         <div className="md:px-0 mx-6 xl:w-4/5 2xl:w-[68%] md:mx-auto mt-14">
           <h1>
-            <CoverDemo title={("title")} subtitle={("subtitle")} />
+            <CoverDemo title={"Eleva tu marca con"} subtitle={"Servicios de Software Xerato"} />
           </h1>
           <p
             className="md:text-center
            text-xl md:text-2xl my-6 md:my-10 md:w-4/5 mx-auto text-gray-500"
           >
-            {("description")}
+            {"Programa una llamada con nosotros para discutir tu proyecto y obtener una cotización en minutos"}
           </p>
 
           <div
