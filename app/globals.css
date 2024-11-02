@@ -67,3 +67,8 @@
     @apply bg-background text-foreground;
   }
 }
+
+.logo-text {
+  font-family: 'Archivo Black', sans-serif;
+  letter-spacing: 0.05em;
+}

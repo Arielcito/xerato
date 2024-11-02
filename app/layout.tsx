@@ -5,8 +5,15 @@ import { Analytics } from "@vercel/analytics/react";
 import { appWithTranslation } from 'next-i18next';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { Archivo_Black } from "next/font/google";
 
 const font = Space_Grotesk({ subsets: ["latin"] });
+
+const archivoBlack = Archivo_Black({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   title: "Xerato | Product Development Studio",
@@ -32,7 +39,7 @@ export default function RootLayout({
 }) {
 
   return (
-    <html lang={locale}>
+    <html lang={locale} className={archivoBlack.className}>
       <body>{children}</body>
     </html>
   );

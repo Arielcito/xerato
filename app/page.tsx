@@ -73,13 +73,7 @@ export default function Home() {
    justify-between py-6 px-4 md:px-8 mx-6"
       >
         <Link href={"/"}>
-          <Image
-            src={"/logo/logo.webp"}
-            alt="Logo"
-            width={1000}
-            height={1000}
-            className="w-28"
-          />
+          <span className="text-3xl font-bold tracking-wider">XERATO</span>
         </Link>
 
         <div className="absolute right-1/2 translate-x-1/2 transform">
@@ -235,7 +229,7 @@ export default function Home() {
                   </h1>
                 </div>
 
-                <div className="w-px bg-gray-300 self-stretch"></div>
+                <div className="w-px bg-gray-300 self-stretch" />
 
                 <div className="flex-1 min-w-0">
                   <h1 className="text-blue-500 text-3xl md:text-5xl whitespace-nowrap overflow-hidden">
@@ -366,7 +360,7 @@ export default function Home() {
           </div>
         </main>
       </Element>
-
+      {/*
       <section>
         <main className="md:flex items-center justify-center space-y-6 md:space-y-0 md:gap-x-20 xl:w-4/5 2xl:w-[68%] mx-auto px-6 md:px-0">
           <Image
@@ -398,6 +392,7 @@ export default function Home() {
           </div>
         </main>
       </section>
+      */}
 
       <Element name="guarentees">
         <ShootingStarsAndStarsBackgroundDemo />
@@ -410,13 +405,7 @@ export default function Home() {
       <footer className="bg-[#fafafa] py-10  px-6 md:px-0 md:mx-auto border-t">
         <div className="flex flex-col  justify-between gap-y-3 xl:w-4/5 2xl:w-[68%] mx-auto">
           <h1 className="text-3xl md:text-5xl font-medium ">
-            <Image
-              src={"/logo/logo.webp"}
-              width={10000}
-              height={10000}
-              className="w-40"
-              alt="image"
-            />{" "}
+            <span className="text-5xl font-bold tracking-wider">XERATO</span>
           </h1>
           <p className="text-left  text-xl  text-gray-500">54-91156569844</p>
           <p className="text-left  text-xl  text-gray-500">
