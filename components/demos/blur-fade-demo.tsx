@@ -5,30 +5,70 @@ import Link from "next/link";
 const works = [
   {
     background: "bg-gray-200",
-    imageUrl: "/images/business.webp",
-    title: "Rubbish Brothers",
-    link: "https://www.rubbishbrothers.com",
+    imageUrl: "/images/projects/rating-app.png",
+    title: "Rating App",
+    link: "https://www.ratingapp.com.ar",
   },
   {
     background: "bg-gray-200",
-    imageUrl: "/images/business.webp",
-    title: "Atlas Massage",
-    link: "https://www.atlasmassage.ca",
+    imageUrl: "/images/projects/copa-de-reyes.png",
+    title: "Copa de Reyes",
+    link: "https://www.blackrhinoygp.com/copadereyes",
   },
   {
     background: "bg-gray-200",
-    imageUrl: "/images/business.webp",
-    title: "Canadian Security Solutions",
-    link: "https://www.canadiansecuritysolutions.com",
+    imageUrl: "/images/projects/risingshakti.png",
+    title: "Rising Shakti",
+    link: "https://www.risingshakti.com",
   },
   {
     background: "bg-gray-200",
-    imageUrl: "/images/business.webp",
-    title: "Flight 9",
-    link: "https://www.flight9.art",
+    imageUrl: "/images/projects/novoturismo.png",
+    title: "Novoturismo",
+    link: "https://www.novoturismo.com.uy",
   },
-
-
+  {
+    background: "bg-gray-200",
+    imageUrl: "/images/projects/green.png",
+    title: "Envases green",
+    link: "https://www.envasesgreen.com.ar",
+  },
+  {
+    background: "bg-gray-200",
+    imageUrl: "/images/projects/as1pe.png",
+    title: "AS1",
+    link: "https://www.as1.pe",
+  },
+  {
+    background: "bg-gray-200",
+    imageUrl: "/images/projects/seshat.png",
+    title: "Seshat",
+    link: "https://seshatdistribuidora.com/",
+  },
+  {
+    background: "bg-gray-200",
+    imageUrl: "/images/projects/congreso-de-punta.png",
+    title: "Congreso de Punta",
+    link: "https://www.congresodepunta.com",
+  },
+  {
+    background: "bg-gray-200",
+    imageUrl: "/images/projects/palacio.png",
+    title: "Palacio Propiedades",
+    link: "https://www.franciscopalacios.com.ar",
+  },
+  {
+    background: "bg-gray-200",
+    imageUrl: "/images/projects/donapupa.png",
+    title: "Dona pupa",
+    link: "https://www.donapupa.com",
+  },
+  {
+    background: "bg-gray-200",
+    imageUrl: "/images/projects/blackrhino.png",
+    title: "Black Rhino YGP",
+    link: "https://www.blackrhinoygp.com",
+  },
 ];
 
 export function BlurFadeDemo() {
