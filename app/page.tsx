@@ -22,39 +22,39 @@ import Footer from "@/components/footer";
 const services = [
   {
     icon: "/images/s_6.png",
-    title: "Web Design + Development",
+    title: "Diseño y Desarrollo Web",
     description:
-      "Take your business to the next level with our web design and development services",
+      "Lleva tu negocio al siguiente nivel con nuestros servicios de diseño y desarrollo web",
   },
   {
     icon: "/images/s_1.png",
-    title: "Search Engine Optimization",
+    title: "Optimización para Motores de Búsqueda",
     description:
-      "Get your website to the top of search engine results with our SEO services",
+      "Posiciona tu sitio web en los primeros resultados de búsqueda con nuestros servicios de SEO",
   },
   {
     icon: "/images/s_5.png",
-    title: "Content Creation",
+    title: "Creación de Contenido",
     description:
-      "Boost your brand's online presence with our social media marketing services",
+      "Impulsa la presencia en línea de tu marca con nuestros servicios de creación de contenido",
   },
   {
     icon: "/images/s_3.png",
-    title: "Social Media Marketing",
+    title: "Marketing en Redes Sociales",
     description:
-      "Interact with your customers and increase sales with our email marketing services",
+      "Interactúa con tus clientes y aumenta las ventas con nuestros servicios de marketing en redes sociales",
   },
   {
     icon: "/images/s_4.png",
-    title: "Email Marketing",
+    title: "Marketing por Email",
     description:
-      "With our content creation services, we help businesses drive results",
+      "Con nuestros servicios de creación de contenido, ayudamos a las empresas a impulsar resultados",
   },
   {
     icon: "/images/s_2.png",
-    title: "Pay-Per-Click Advertising",
+    title: "Publicidad de Pago por Clic",
     description:
-      "Don't waste money on ineffective advertising. Our PPC services help you reach your target audience",
+      "No desperdicies dinero en publicidad ineficaz. Nuestros servicios de PPC te ayudan a llegar a tu público objetivo",
   },
 ];
 
@@ -107,7 +107,7 @@ export default function Home() {
        duration-200 
        hover:shadow-[1px_1px_rgba(0,0,0),2px_2px_rgba(0,0,0),3px_3px_rgba(0,0,0),4px_4px_rgba(0,0,0),5px_5px_0px_0px_rgba(0,0,0)] dark:shadow-[1px_1px_rgba(255,255,255),2px_2px_rgba(255,255,255),3px_3px_rgba(255,255,255),4px_4px_rgba(255,255,255),5px_5px_0px_0px_rgba(255,255,255)] "
             >
-              Book a Call
+              Agendar Llamada
             </Link>
             <Link
               href={"/showcase"}
@@ -122,7 +122,7 @@ export default function Home() {
         rounded-[6px]
         hover:shadow-[1px_1px_rgba(0,0,0),2px_2px_rgba(0,0,0),3px_3px_rgba(0,0,0),4px_4px_rgba(0,0,0),5px_5px_0px_0px_rgba(0,0,0)] dark:shadow-[1px_1px_rgba(255,255,255),2px_2px_rgba(255,255,255),3px_3px_rgba(255,255,255),4px_4px_rgba(255,255,255),5px_5px_0px_0px_rgba(255,255,255)]"
             >
-              Showcase
+              Portafolio
             </Link>
           </div>
 
@@ -259,7 +259,7 @@ export default function Home() {
       <Element name="process">
         <main className="md:px-0 mx-6 md:mx-auto">
           <h1 className="text-3xl md:text-5xl md:text-center font-medium flex items-center gap-x-2 mx-auto justify-center">
-            Our{" "}
+            Nuestro{" "}
             <span className="text-blue-500 flex gap-x-1 items-center">
               {" "}
               <Image
@@ -269,7 +269,7 @@ export default function Home() {
                 className="w-6"
                 alt="image"
               />
-              Creative
+              Proceso
               <Image
                 src={"/icons/star.svg"}
                 width={10000}
@@ -278,7 +278,7 @@ export default function Home() {
                 alt="image"
               />
             </span>{" "}
-            Process
+            Creativo
           </h1>
 
           <p
@@ -286,8 +286,7 @@ export default function Home() {
           py-4 md:w-1/2 mx-auto 
           text-xl md:text-2xl text-gray-500"
           >
-            All of our services are designed to help your business to get
-            noticed.
+            Todos nuestros servicios están diseñados para ayudar a tu negocio a destacar.
           </p>
 
           <div className="flex flex-col md:flex-row items-center justify-center w-full md:w-1/2 mx-auto">

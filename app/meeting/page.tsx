@@ -7,6 +7,7 @@ import { PiCheckCircle } from "react-icons/pi";
 import { motion } from "framer-motion";
 import Cal from "@calcom/embed-react";
 import CalEmbed from "./cal";
+import Navbar from "@/components/ui/navbar";
 
 const checkItemVariants = {
   hidden: { opacity: 0, x: -50 },
@@ -26,7 +27,7 @@ const Meeting = () => {
   bg-[#fafafa] bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]
     
     ">
-      <ShowcaseNavbar />
+      <Navbar />
       <div className="md:px-0 px-6 xl:w-4/5 2xl:w-[68%] justify-between md:mt-14 md:flex mx-auto  ">
         <div className="md:w-2/5">
           <h1 className="text-4xl font-semibold pt-10   ">Let&apos;s Meet</h1>
@@ -54,6 +55,7 @@ const Meeting = () => {
                 },
               ].map((item, index) => (
                 <motion.div
+                  // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
                   key={index}
                   variants={checkItemVariants}
                   initial="hidden"
