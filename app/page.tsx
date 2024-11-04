@@ -110,7 +110,7 @@ export default function Home() {
               Agendar Llamada
             </Link>
             <Link
-              href={"/showcase"}
+              href={"/projects"}
               className="
               bg-white
    py-3 
