@@ -58,6 +58,28 @@ const services = [
   },
 ];
 
+const teamMembers = [
+  {
+    name: "Ariel Serato",
+    position: "CEO & Product Engenieer",
+    image: "/images/team/ariel.jpg",
+    linkedin: "https://www.linkedin.com/in/ariel-serato"
+  },
+  {
+    name: "Melina Valle",
+    position: "Diseñadora UI/UX",
+    image: "/images/team/melina.jpg",
+    linkedin: "https://www.linkedin.com/in/melina-valle-9b3088211"
+  },
+  {
+    name: "Dante Zulli",
+    position: "CTO",
+    image: "/images/team/dante.jpg",
+    linkedin: "https://www.linkedin.com/in/dante-zulli"
+  },
+    // Puedes agregar más miembros aquí
+];
+
 export default function Home() {
 
   return (
@@ -228,7 +250,7 @@ export default function Home() {
             <WordPullUpDemo />
           </h1>
           <p className="md:text-center py-4 md:w-1/2 mx-auto text-xl md:text-2xl text-gray-500">
-            All of our services are designed to help your business stand out
+            Todos nuestros servicios están diseñados para ayudar a que tu negocio destaque
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-10">
@@ -335,6 +357,50 @@ export default function Home() {
 
       <Element name="guarentees">
         <ShootingStarsAndStarsBackgroundDemo />
+      </Element>
+
+      <Element name="team">
+        <div className="md:px-0 mx-6 xl:w-4/5 2xl:w-[68%] md:mx-auto py-20">
+          <h1 className="text-3xl md:text-5xl text-center font-medium mb-4">
+            Nuestro{" "}
+            <span className="text-blue-500">Equipo</span>
+          </h1>
+          <p className="text-center py-4 md:w-1/2 mx-auto text-xl md:text-2xl text-gray-500 mb-10">
+            Conoce a los expertos detrás de nuestros servicios
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 ">
+            {teamMembers.map((member) => (
+              <div 
+                key={member.name}
+                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+              >
+                <Image
+                  src={member.image}
+                  alt={member.name}
+                  width={400}
+                  height={400}
+                  className="w-full h-64 object-cover"
+                />
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
+                  <p className="text-gray-600 mb-4">{member.position}</p>
+                  <a 
+                    href={member.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-blue-500 hover:text-blue-700 transition-colors"
+                  >
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                    LinkedIn
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </Element>
 
       <section className="my-10 md:py-20 xl:w-4/5 2xl:w-[68%] md:mx-auto">
