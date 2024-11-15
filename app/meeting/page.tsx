@@ -30,28 +30,28 @@ const Meeting = () => {
       <Navbar />
       <div className="md:px-0 px-6 xl:w-4/5 2xl:w-[68%] justify-between md:mt-14 md:flex mx-auto  ">
         <div className="md:w-2/5">
-          <h1 className="text-4xl font-semibold pt-10   ">Let&apos;s Meet</h1>
+          <h1 className="text-4xl font-semibold pt-10   ">Reunámonos</h1>
           <p className="text-lg text-gray-500 py-4">
-            We are always excited to meet new people and discuss new projects.
-            Please feel free to book a meeting with us.
+            Siempre estamos emocionados de conocer nuevas personas y discutir nuevos proyectos.
+            No dudes en agendar una reunión con nosotros.
           </p>
 
           {[
                 {
-                  title: "Development + Design",
+                  title: "Desarrollo + Diseño",
                   description:
-                    "Turn your ideas into reality with our development and design services.",
+                    "Convierte tus ideas en realidad con nuestros servicios de desarrollo y diseño.",
                 },
 
                 {
-                  title: "Free Consultation",
+                  title: "Consulta Gratuita",
                   description:
-                    "Get expert advice on how to improve your business and increase your online presence.",
+                    "Obtén asesoramiento experto sobre cómo mejorar tu negocio y aumentar tu presencia en línea.",
                 },
                 {
-                  title: "Technical Support",
+                  title: "Soporte Técnico",
                   description:
-                    "Get technical support for your website or application.",
+                    "Obtén soporte técnico para tu sitio web o aplicación.",
                 },
               ].map((item, index) => (
                 <motion.div

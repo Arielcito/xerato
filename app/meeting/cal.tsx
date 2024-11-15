@@ -1,15 +1,15 @@
-import { useEffect } from 'react';
-import Cal, { getCalApi } from "@calcom/embed-react";
+import { InlineWidget } from "react-calendly";
 
 const CalEmbed = () => {
-  useEffect(() => {
-    (async () => {
-      const cal = await getCalApi();
-      cal("ui", {"styles":{"branding":{"brandColor":"#000000"}},"hideEventTypeDetails":false,"layout":"month_view"});
-    })();
-  }, []);
-
-  return <Cal calLink="cal.com/ariel-serato-lbbyvw/30min" style={{width:"100%", height:"100%", overflow:"scroll"}} />;
+  return (
+    <InlineWidget
+      url="https://calendly.com/serato-arieli/1-a-1"
+      styles={{
+        height: '100%',
+        width: '100%',
+      }}
+    />
+  );
 };
 
 export default CalEmbed;
