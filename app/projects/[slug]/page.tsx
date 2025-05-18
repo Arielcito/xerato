@@ -23,10 +23,10 @@ export default function ProjectPage({ params }: PageProps) {
     <div className="container mx-auto px-4 py-8">
       <div className="max-w-4xl mx-auto">
         <Link 
-          href="/#photos" 
+          href="/projects" 
           className="inline-block mb-8 text-blue-500 hover:text-blue-600"
         >
-          ← Back to Projects
+          ← Volver a los proyectos
         </Link>
         
         <h1 className="text-4xl font-bold mb-6">{project.title}</h1>
@@ -42,8 +42,21 @@ export default function ProjectPage({ params }: PageProps) {
           
           <div className="p-6">
             {project.markdownContent ? (
-              <div className="prose prose-lg max-w-none">
-                <ReactMarkdown>{project.markdownContent}</ReactMarkdown>
+              <div className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-700 prose-a:text-blue-600 prose-strong:text-gray-900 prose-ul:text-gray-700 prose-li:text-gray-700">
+                <ReactMarkdown
+                  components={{
+                    h1: ({ node, ...props }) => <h1 className="text-4xl font-bold mb-6" {...props} />,
+                    h2: ({ node, ...props }) => <h2 className="text-3xl font-semibold mb-4" {...props} />,
+                    h3: ({ node, ...props }) => <h3 className="text-2xl font-semibold mb-3" {...props} />,
+                    p: ({ node, ...props }) => <p className="mb-4" {...props} />,
+                    ul: ({ node, ...props }) => <ul className="list-disc pl-6 mb-4" {...props} />,
+                    ol: ({ node, ...props }) => <ol className="list-decimal pl-6 mb-4" {...props} />,
+                    li: ({ node, ...props }) => <li className="mb-2" {...props} />,
+                    a: ({ node, ...props }) => <a className="text-blue-600 hover:text-blue-800 underline" {...props} />,
+                  }}
+                >
+                  {project.markdownContent}
+                </ReactMarkdown>
               </div>
             ) : (
               <p className="text-gray-700 text-lg mb-6">{project.description}</p>

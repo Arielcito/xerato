@@ -345,7 +345,7 @@ Rating App es una innovadora plataforma de entretenimiento que revoluciona la ma
     background: "bg-gray-200",
     imageUrl: "/images/projects/risingshakti.png",
     title: "Rising Shakti",
-    link: "https://www.risingshakti.com",
+    link: "https://rising-shakti.com/",
     description: "A wellness and spiritual growth platform offering online courses, meditation guides, and community features.",
     slug: "rising-shakti",
     hasDetails: false
