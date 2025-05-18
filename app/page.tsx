@@ -61,7 +61,7 @@ const services = [
 const teamMembers = [
   {
     name: "Ariel Serato",
-    position: "CEO & Product Engenieer",
+    position: "CEO & Product Engineer",
     image: "/images/team/ariel.jpg",
     linkedin: "https://www.linkedin.com/in/ariel-serato"
   },

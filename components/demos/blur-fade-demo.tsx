@@ -1,101 +1,49 @@
 import BlurFade from "@/components/magicui/blur-fade";
 import Image from "next/image";
 import Link from "next/link";
-
-const works = [
-  {
-    background: "bg-gray-200",
-    imageUrl: "/images/projects/rating-app.png",
-    title: "Rating App",
-    link: "https://www.ratingapp.com.ar",
-  },
-  {
-    background: "bg-gray-200",
-    imageUrl: "/images/projects/copa-de-reyes.png",
-    title: "Copa de Reyes",
-    link: "https://www.blackrhinoygp.com/copadereyes",
-  },
-  {
-    background: "bg-gray-200",
-    imageUrl: "/images/projects/risingshakti.png",
-    title: "Rising Shakti",
-    link: "https://www.risingshakti.com",
-  },
-  {
-    background: "bg-gray-200",
-    imageUrl: "/images/projects/novoturismo.png",
-    title: "Novoturismo",
-    link: "https://www.novoturismo.com.uy",
-  },
-  {
-    background: "bg-gray-200",
-    imageUrl: "/images/projects/green.png",
-    title: "Envases green",
-    link: "https://www.envasesgreen.com.ar",
-  },
-  {
-    background: "bg-gray-200",
-    imageUrl: "/images/projects/as1pe.png",
-    title: "AS1",
-    link: "https://www.as1.pe",
-  },
-  {
-    background: "bg-gray-200",
-    imageUrl: "/images/projects/seshat.png",
-    title: "Seshat",
-    link: "https://seshatdistribuidora.com/",
-  },
-  {
-    background: "bg-gray-200",
-    imageUrl: "/images/projects/congreso-de-punta.png",
-    title: "Congreso de Punta",
-    link: "https://www.congresodepunta.com",
-  },
-  {
-    background: "bg-gray-200",
-    imageUrl: "/images/projects/palacio.png",
-    title: "Palacio Propiedades",
-    link: "https://www.franciscopalacios.com.ar",
-  },
-  {
-    background: "bg-gray-200",
-    imageUrl: "/images/projects/donapupa.png",
-    title: "Dona pupa",
-    link: "https://www.donapupa.com",
-  },
-  {
-    background: "bg-gray-200",
-    imageUrl: "/images/projects/blackrhino.png",
-    title: "Black Rhino YGP",
-    link: "https://www.blackrhinoygp.com",
-  },
-];
+import { works } from "@/data/works";
 
 export function BlurFadeDemo() {
   return (
     <section id="photos">
       <div className="grid md:grid-cols-2 gap-8 mt-10 justify-items-center">
-        {works.map(({ imageUrl, title, link }, idx) => (
+        {works.map(({ imageUrl, title, link, slug, hasDetails }, idx) => (
           <BlurFade
             key={title}
             delay={0.25 + idx * 0.05}
             inView
             className={`rounded-lg ${works[idx].background} p-4`}
           >
-            <Link href={link} target="_blank" rel="noreferrer">
+            <div className="flex flex-col h-full">
               <Image
                 height={10000}
                 width={10000}
-                className="
-                h-5/6 w-full object-cover rounded-lg"
-        
-              
-       
+                className="h-5/6 w-full object-cover rounded-lg"
                 src={imageUrl}
-                alt={`Random stock image ${idx + 1}`}
+                alt={`${title} project screenshot`}
               />
-              <h3 className="text-lg font-semibold p-4">{title}</h3>
-            </Link>
+              <div className="p-4">
+                <h3 className="text-lg font-semibold mb-4">{title}</h3>
+                <div className="flex gap-3">
+                  <Link 
+                    href={link} 
+                    target="_blank" 
+                    rel="noreferrer"
+                    className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors"
+                  >
+                    Visit Website
+                  </Link>
+                  {hasDetails && (
+                    <Link 
+                      href={`/projects/${slug}`}
+                      className="px-4 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-600 transition-colors"
+                    >
+                      View Details
+                    </Link>
+                  )}
+                </div>
+              </div>
+            </div>
           </BlurFade>
         ))}
       </div>
